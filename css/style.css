@@ -44,7 +44,7 @@ Grey dark 3: #999
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
-  @media only screen and (max-width: 68.75rem) {
+  @media only screen and (max-width: 68.75em) {
     html {
       font-size: 50%; } }
 
@@ -62,7 +62,7 @@ body {
   margin: 8rem auto;
   background-color: var(--color-grey-light-1);
   box-shadow: var(--shadow-dark); }
-  @media only screen and (max-width: 75rem) {
+  @media only screen and (max-width: 75em) {
     .container {
       margin: 0;
       max-width: 100%;
@@ -76,11 +76,16 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 11rem; } }
 
 .content {
   display: flex;
   min-height: 85vh; }
-  @media only screen and (max-width: 56.25rem) {
+  @media only screen and (max-width: 56.25em) {
     .content {
       flex-direction: column; } }
 
@@ -90,9 +95,6 @@ body {
   flex-direction: column;
   background-color: var(--color-grey-dark-1);
   flex: 0 0 18%; }
-  @media only screen and (max-width: 56.25rem) {
-    .sidebar {
-      flex-direction: row; } }
 
 .hotel-view {
   background-color: #fff;
@@ -104,6 +106,12 @@ body {
   background-color: var(--color-grey-light-1);
   border-bottom: var(--line);
   font-size: 1.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .detail {
+      padding: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: #fff;
@@ -111,6 +119,14 @@ body {
   padding: 3rem;
   flex: 0 0 60%;
   margin-right: 4.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .description {
+      padding: 1rem;
+      margin-right: 2rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 2rem; } }
 
 .user-reviews {
   flex: 1;
@@ -127,6 +143,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 1 0 100%; } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -199,10 +219,21 @@ body {
   font-size: 1.5rem;
   list-style: none;
   margin-top: 3.5rem; }
+  @media only screen and (max-width: 56.25em) {
+    .side-nav {
+      display: flex;
+      margin: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .side-nav {
+      flex-direction: column; } }
   .side-nav__item {
     position: relative; }
     .side-nav__item:not(:last-child) {
       margin-bottom: .5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .side-nav__item {
+        flex: 1;
+        justify-content: center; } }
     .side-nav__item::before {
       content: "";
       position: absolute;
@@ -228,9 +259,10 @@ body {
     align-items: center;
     position: relative;
     z-index: 10; }
-    @media only screen and (max-width: 56.25rem) {
+    @media only screen and (max-width: 56.25em) {
       .side-nav__link:link, .side-nav__link:visited {
-        display: inline-block; } }
+        justify-content: center;
+        padding: 2rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
@@ -242,6 +274,10 @@ body {
   text-align: center;
   padding: 2.5rem;
   color: var(--color-grey-light-4); }
+  @media only screen and (max-width: 56.25em) {
+    .legal {
+      display: none;
+      margin: 0; } }
 
 .gallery {
   display: flex; }
@@ -363,6 +399,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  .recommend__friends {
+    display: flex; }
   .recommend__photo {
     box-sizing: content-box;
     height: 4rem;
@@ -371,7 +409,7 @@ body {
     border: solid 3px white; }
     .recommend__photo:not(:last-child) {
       margin-right: -2rem; }
-      @media only screen and (max-width: 75rem) {
+      @media only screen and (max-width: 75em) {
         .recommend__photo:not(:last-child) {
           margin-right: -1.5rem; } }
 
@@ -424,11 +462,17 @@ body {
 .cta {
   padding: 3.5rem 0;
   text-align: center; }
+  @media only screen and (max-width: 56.25em) {
+    .cta {
+      padding: 1rem 0; } }
   .cta__book-now {
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: 300;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 56.25em) {
+      .cta__book-now {
+        margin-bottom: 1.5rem; } }
 
 .btn {
   font-size: 1.5rem;
